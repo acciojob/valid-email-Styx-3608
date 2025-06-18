@@ -1,5 +1,10 @@
 function validEmail(str) {
-  //your JS code here.
+  // Return false for empty input
+  if (!str) return false;
+
+  // Regular expression to validate email
+  const regex = /^[a-zA-Z0-9]+([._-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.-]?[a-zA-Z0-9]+)*(\.[a-zA-Z]{2,6})+$/;
+  return regex.test(str);
 }
 
 // Do not change the code below.
